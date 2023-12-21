@@ -6,5 +6,115 @@
     /* ### Neutral */
     --Very-dark-blue: hsl(212, 21%, 14%);
     --Dark-grayish-blue: hsl(228, 12%, 48%);
-    --White: hsl(0, 0%, 100%)
+    --White: hsl(0, 0%, 100%);
+
+    /* ### Fonts */
+    --Montserrat: 'Montserrat', sans-serif;
+    --Fraunces: 'Fraunces', serif;
+}
+
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Cream);
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+    width: 90%;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: var(--White);
+}
+
+.main__figure {
+    width: 100%;
+}
+
+.main__img {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto 0;
+    overflow: hidden;
+}
+
+.main__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main__subtitle {
+    /* margin: 10px 0 0; */
+    text-transform: uppercase;
+    font-family: var(--Montserrat);
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: var(--Dark-grayish-blue);
+}
+
+.main__title {
+    width: 90%;
+    font-family: var(--Fraunces);
+    font-weight: 900;
+    color: var(--Very-dark-blue);
+    /* margin-top: 15px; */
+}
+
+.main__paragraph {
+    /* margin: 20px 0 30px; */
+    font-family: var(var(--Montserrat));
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.main__price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: var(--Fraunces);
+    font-size: 2em;
+    font-weight: 900;
+    color: var(--Dark-cyan);
+    margin-bottom: 20px;
+}
+
+.main__price::after {
+    content: "$169.99";
+    font-size: 15px;
+    text-decoration: line-through;
+    font-family: var(--Montserrat);
+    color: var(--Dark-grayish-blue);
+}
+
+.main__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0;
+    outline: none;
+    border: none;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    font-family: var(--Montserrat);
+    font-weight: bold;
+    gap: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.main__button::before {
+    content: url("../images/cart.svg");
 }
